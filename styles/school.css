@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+.quicksand {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+button {
+  font-family: inherit;
+}
+/* Shared Styles */
+.orange {
+  color: #fea301;
+}
+.sky-blue {
+  color: #01acfd;
+}
+.sky {
+  color: #05d4df;
+}
+.violet {
+  color: #5d58ef;
+}
+.black {
+  color: #111111;
+}
+body {
+  background: var(--White, #f7f7f7);
+}
+header,
+main {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+/* Nav Related Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav > div > ul {
+  display: flex;
+  gap: 32px;
+}
+nav ul li {
+  list-style: none;
+}
+.logo-part {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo-part > p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.contact-btn,
+.banner-btn {
+  padding: 10px 60px;
+  border-radius: 12px;
+  background: #fea301;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/* Banner Related Styles */
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner-content {
+  max-width: 640px;
+}
+.banner-title {
+  color: var(--Black, #111);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.banner-description {
+  color: var(--Black, #111);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.banner-btn {
+  background-color: #111;
+  color: white;
+}
+/* Responsive for Mobile Devices */
+@media screen and (max-width: 576px) {
+  .banner-container {
+    flex-direction: column-reverse;
+  }
+  .banner-img img {
+    width: 100%;
+  }
+}
