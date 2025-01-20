@@ -24,6 +24,9 @@ button {
 .black {
   color: #111111;
 }
+.none {
+  display: none;
+}
 body {
   background: var(--White, #f7f7f7);
 }
@@ -31,6 +34,9 @@ header,
 main {
   max-width: 1160px;
   margin: 0 auto;
+}
+section {
+  margin-bottom: 60px;
 }
 /* Nav Related Styles */
 nav {
@@ -89,8 +95,43 @@ nav ul li {
 }
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
+  .nav-title,
+  .menu-part,
+  .nav-btn {
+    display: none;
+    position: absolute;
+  }
+  .nav-logo {
+    width: 45px;
+    height: 45px;
+  }
+  .hamburger {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 10px;
+  }
+  .nav-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .banner-container {
     flex-direction: column-reverse;
+  }
+  .banner-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .banner-description {
+    font-size: 14px;
+  }
+  .banner-content {
+    text-align: center;
+  }
+  .banner-btn {
+    padding: 10px 24px;
   }
   .banner-img img {
     width: 100%;
