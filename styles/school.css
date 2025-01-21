@@ -24,6 +24,18 @@ button {
 .black {
   color: #111111;
 }
+.background-1 {
+  background: linear-gradient(180deg, #def5ff 0%, rgba(255, 255, 255, 0) 40%),
+    #fff;
+}
+.background-2 {
+  background: linear-gradient(180deg, #fff4dc 0%, rgba(255, 255, 255, 0) 40%),
+    #fff;
+}
+.background-3 {
+  background: linear-gradient(180deg, #eee1ff 0%, rgba(255, 255, 255, 0) 40%),
+    #fff;
+}
 .none {
   display: none;
 }
@@ -32,11 +44,11 @@ body {
 }
 header,
 main {
-  max-width: 1160px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 section {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 /* Nav Related Styles */
 nav {
@@ -93,6 +105,137 @@ nav ul li {
   background-color: #111;
   color: white;
 }
+/* Standard Curriculum Section Related Styles */
+.standard-curriculum-container {
+  background-image: url("../assets/bg.png");
+  background-position: -50px -70px;
+}
+.section-title {
+  color: #000;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.card img {
+  width: 130px;
+  height: 130px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 476.784px;
+  padding: 52px 40px 53px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 32.069px;
+  flex-shrink: 0;
+  border-radius: 18.864px;
+  border: 0.943px solid #def5ff;
+  box-shadow: 0px 0px 28.296px 0.943px rgba(0, 0, 0, 0.05) inset;
+}
+.card-title {
+  color: #202020;
+  text-align: center;
+  font-size: 24.523px;
+  font-weight: 700;
+}
+.card-description {
+  color: #808080;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 15.091px;
+  font-weight: 500;
+}
+/* Our Stories Section Related Styles */
+.our-stories-container {
+  background: url("../assets/bg.png"),
+    linear-gradient(
+      0deg,
+      rgba(254, 163, 1, 0.3) 0%,
+      rgba(255, 255, 255, 0.3) 100%
+    ),
+    lightgray;
+}
+.our-stories-container > h3 {
+  color: #000;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 80px;
+}
+.stories-card-container {
+  display: grid;
+  grid-template-columns: 540px repeat(2, 291px);
+  grid-template-rows: repeat(2, 315px);
+  gap: 20px;
+}
+.stories-card,
+.stories-card-1 {
+  border-radius: 16px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.stories-card-1 {
+  gap: 20px;
+}
+#box-1,
+.stories-card-pic {
+  grid-row: span 2;
+  background: lightgray 50% / cover no-repeat, #d9d9d9;
+}
+.stories-card-pic-1 {
+  width: 540px;
+  height: 337px;
+  flex-shrink: 0;
+  border-radius: 16px 16px 0px 0px;
+}
+.stories-card-pic {
+  width: 291px;
+  border-radius: 16px 16px 0px 0px;
+}
+.stories-card-title-1,
+.stories-card-title {
+  color: #000;
+  font-family: Quicksand;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-left: 30px;
+}
+.stories-card-title {
+  font-size: 1rem;
+}
+.stories-card-description {
+  color: #666;
+  font-family: Raleway;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-left: 30px;
+}
+.stories-card-btn,
+.stories-card-btn-1 {
+  display: flex;
+  width: 174px;
+  height: 47px;
+  padding: 14px 18px 15px 19px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 47px;
+  background: #3cd8e8;
+  border: none;
+  transform: translate(25px, -25px);
+}
+.stories-card-btn-1 {
+  transform: translate(25px, -45px);
+}
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
   .nav-title,
@@ -135,5 +278,43 @@ nav ul li {
   }
   .banner-img img {
     width: 100%;
+  }
+  .standard-curriculum-container {
+    background-image: none;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12.5px;
+  }
+  .card {
+    height: 320px;
+    gap: 15px;
+  }
+  /* Our Stories Section Related Styles */
+  #box-1 {
+    display: none;
+  }
+  .stories-card-container {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: none;
+  }
+  .stories-card-pic {
+    width: 175px;
+  }
+  .stories-card-btn {
+    display: flex;
+    width: 103.909px;
+    height: 22.833px;
+    padding: 5.708px 11.24px 6.279px 11.416px;
+    justify-content: center;
+    align-items: center;
+    transform: translate(20px, -15px);
+    font-size: 9px;
+  }
+  .stories-card-title {
+    font-size: 0.7rem;
   }
 }
