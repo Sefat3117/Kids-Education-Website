@@ -43,7 +43,7 @@ body {
   background: var(--White, #f7f7f7);
 }
 header,
-main {
+.standard-curriculum-container {
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -73,7 +73,8 @@ nav ul li {
   font-weight: 700;
 }
 .contact-btn,
-.banner-btn {
+.banner-btn,
+.view-all-btn {
   padding: 10px 60px;
   border-radius: 12px;
   background: #fea301;
@@ -101,7 +102,8 @@ nav ul li {
   font-size: 1.2rem;
   font-weight: 400;
 }
-.banner-btn {
+.banner-btn,
+.view-all-btn {
   background-color: #111;
   color: white;
 }
@@ -151,8 +153,29 @@ nav ul li {
   font-size: 15.091px;
   font-weight: 500;
 }
+/* Slide Icons Related Styles */
+.slide-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 80px 0 60px 0;
+}
+.slide-icons i {
+  display: flex;
+  width: 60px;
+  padding: 17px 0px 19px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #fea301;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+}
 /* Our Stories Section Related Styles */
-.our-stories-container {
+.our-stories-all-contents-with-btn {
   background: url("../assets/bg.png"),
     linear-gradient(
       0deg,
@@ -160,20 +183,21 @@ nav ul li {
       rgba(255, 255, 255, 0.3) 100%
     ),
     lightgray;
+  padding: 60px 0 40px 0;
+  margin-top: 60px 0 0 0;
 }
-.our-stories-container > h3 {
+.our-stories-section-title {
   color: #000;
   text-align: center;
   font-size: 2.8rem;
   font-weight: 700;
-  margin: 0;
-  padding-bottom: 80px;
 }
 .stories-card-container {
   display: grid;
   grid-template-columns: 540px repeat(2, 291px);
   grid-template-rows: repeat(2, 315px);
   gap: 20px;
+  justify-content: center;
 }
 .stories-card,
 .stories-card-1 {
@@ -236,6 +260,10 @@ nav ul li {
 .stories-card-btn-1 {
   transform: translate(25px, -45px);
 }
+.view-all {
+  text-align: center;
+  padding-top: 40px;
+}
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
   .nav-title,
@@ -294,15 +322,30 @@ nav ul li {
     gap: 15px;
   }
   /* Our Stories Section Related Styles */
+  .our-stories-all-contents-with-btn {
+    background: linear-gradient(
+        0deg,
+        rgba(254, 163, 1, 0.3) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      ),
+      lightgray;
+    padding: 10px 0 40px 0;
+    margin-top: 40px;
+  }
+  .our-stories-container {
+    background-image: none;
+  }
   #box-1 {
     display: none;
   }
   .stories-card-container {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 48%);
     grid-template-rows: none;
+    column-gap: 10px;
+    row-gap: 20px;
   }
   .stories-card-pic {
-    width: 175px;
+    width: 100%;
   }
   .stories-card-btn {
     display: flex;
@@ -316,5 +359,8 @@ nav ul li {
   }
   .stories-card-title {
     font-size: 0.7rem;
+  }
+  .slide-icons {
+    display: none;
   }
 }
