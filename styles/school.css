@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+* {
+  margin: 0;
+}
 .quicksand {
   font-family: "Quicksand", serif;
   font-optical-sizing: auto;
@@ -47,14 +50,12 @@ header,
   max-width: 1140px;
   margin: 0 auto;
 }
-section {
-  margin-bottom: 80px;
-}
 /* Nav Related Styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
 }
 nav > div > ul {
   display: flex;
@@ -88,6 +89,7 @@ nav ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 80px;
 }
 .banner-content {
   max-width: 640px;
@@ -264,6 +266,70 @@ nav ul li {
   text-align: center;
   padding-top: 40px;
 }
+/* Footer Related Styles */
+footer {
+  height: 519px;
+  flex-shrink: 0;
+  background: #01acfd;
+  display: grid;
+  grid-template-columns: 600px repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+.footer-logo-title {
+  color: #fff;
+  font-size: 42.143px;
+  font-weight: 700;
+}
+.footer-logo-description {
+  max-width: 400px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.footer-title {
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 80px;
+}
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-menu > p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer-icons-part {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-icon-title {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  padding-left: 5px;
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2px;
+}
+.footer-social-icons img {
+  width: 40px;
+  height: 40px;
+  padding: 10px 10px 10px 10px;
+}
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
   .nav-title,
@@ -307,6 +373,7 @@ nav ul li {
   .banner-img img {
     width: 100%;
   }
+  /* Standard Curriculum Section Related Styles */
   .standard-curriculum-container {
     background-image: none;
   }
@@ -322,6 +389,9 @@ nav ul li {
     gap: 15px;
   }
   /* Our Stories Section Related Styles */
+  #our-stories-mb {
+    margin: 0;
+  }
   .our-stories-all-contents-with-btn {
     background: linear-gradient(
         0deg,
