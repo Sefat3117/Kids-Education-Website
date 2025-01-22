@@ -287,6 +287,7 @@ footer {
 .footer-logo {
   display: flex;
   align-items: center;
+  margin-top: -60px;
 }
 .footer-logo-title {
   color: #fff;
@@ -438,7 +439,7 @@ footer {
     display: flex;
     width: 103.909px;
     height: 22.833px;
-    padding: 5.708px 11.24px 6.279px 11.416px;
+    padding: 5px 11px 6px 11px;
     justify-content: center;
     align-items: center;
     transform: translate(20px, -15px);
@@ -456,6 +457,9 @@ footer {
     height: 640px;
     justify-items: start;
     align-content: center;
+  }
+  .footer-logo {
+    margin-top: 0;
   }
   .footer-logo-title {
     font-size: 35px;
