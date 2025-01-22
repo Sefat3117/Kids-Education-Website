@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -84,6 +84,11 @@ nav ul li {
   font-size: 1.2rem;
   font-weight: 600;
 }
+marquee {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
 /* Banner Related Styles */
 .banner-container {
   display: flex;
@@ -103,6 +108,7 @@ nav ul li {
   color: var(--Black, #111);
   font-size: 1.2rem;
   font-weight: 400;
+  padding: 24px 0px;
 }
 .banner-btn,
 .view-all-btn {
@@ -119,6 +125,7 @@ nav ul li {
   text-align: center;
   font-size: 2.6rem;
   font-weight: 700;
+  padding-bottom: 60px;
 }
 .card-container {
   display: grid;
@@ -193,6 +200,7 @@ nav ul li {
   text-align: center;
   font-size: 2.8rem;
   font-weight: 700;
+  padding-bottom: 60px;
 }
 .stories-card-container {
   display: grid;
@@ -282,21 +290,26 @@ footer {
 }
 .footer-logo-title {
   color: #fff;
-  font-size: 42.143px;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .footer-logo-description {
   max-width: 400px;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 400;
+  padding-top: 5px;
+}
+.footer-logo img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
 }
 .footer-title {
   color: #fff;
-  font-family: Quicksand;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 .footer-menu {
   display: flex;
@@ -316,19 +329,19 @@ footer {
 }
 .footer-icon-title {
   color: #fff;
-  font-size: 26px;
+  font-size: 1.5rem;
   font-weight: 700;
   padding-left: 5px;
+  margin-top: -80px;
 }
 .footer-social-icons {
   display: flex;
   justify-content: flex-start;
-  gap: 2px;
+  gap: 10px;
 }
 .footer-social-icons img {
   width: 40px;
   height: 40px;
-  padding: 10px 10px 10px 10px;
 }
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
@@ -360,9 +373,13 @@ footer {
   .banner-title {
     font-size: 2rem;
     margin: 0;
+    width: 95%;
   }
   .banner-description {
     font-size: 14px;
+    padding: 18px 0;
+    width: 95%;
+    font-weight: 500;
   }
   .banner-content {
     text-align: center;
@@ -371,7 +388,9 @@ footer {
     padding: 10px 24px;
   }
   .banner-img img {
-    width: 100%;
+    width: 95%;
+    display: block;
+    margin: 0 auto;
   }
   /* Standard Curriculum Section Related Styles */
   .standard-curriculum-container {
@@ -379,6 +398,7 @@ footer {
   }
   .section-title {
     font-size: 1.5rem;
+    padding-bottom: 20px;
   }
   .card-container {
     grid-template-columns: repeat(1, 1fr);
@@ -389,16 +409,13 @@ footer {
     gap: 15px;
   }
   /* Our Stories Section Related Styles */
-  #our-stories-mb {
-    margin: 0;
-  }
   .our-stories-all-contents-with-btn {
     background: linear-gradient(
-        0deg,
-        rgba(254, 163, 1, 0.3) 0%,
-        rgba(255, 255, 255, 0.3) 100%
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(254, 163, 1, 0.3) 100%
       ),
-      lightgray;
+      lightgray 0% 0% / 50px 50px repeat;
     padding: 10px 0 40px 0;
     margin-top: 40px;
   }
@@ -432,5 +449,51 @@ footer {
   }
   .slide-icons {
     display: none;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-columns: none;
+    height: 640px;
+    justify-items: start;
+    align-content: center;
+  }
+  .footer-logo-title {
+    font-size: 35px;
+    padding-left: 5px;
+  }
+  .footer-logo img {
+    width: 70px;
+    height: 70px;
+    padding-left: 5px;
+  }
+  .footer-logo-description {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+  .footer-title {
+    margin: 0;
+  }
+  .footer-menu {
+    gap: 10px;
+    padding: 30px 0px 0px 15px;
+  }
+  .footer-logo img {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+  .footer-icons-part {
+    margin: 0;
+    padding: 30px 0px 0px 10px;
+  }
+  .footer-social-icons {
+    gap: 5px;
+  }
+  .footer-icon-title {
+    margin: 0;
+  }
+  .footer-social-icons img {
+    width: 33px;
+    height: 33px;
   }
 }
